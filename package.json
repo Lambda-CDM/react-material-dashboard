@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist/*",
+    "clean-source": "rimraf README.md src webroot package.json",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "dist": "npm run copy & webpack --env=dist",
     "lint": "eslint ./src",
@@ -21,7 +22,10 @@
     "deploy": "gh-pages-deploy"
   },
   "gh-pages-deploy": {
-    "staticpath": "dist"
+    "staticpath": "dist",
+    "post": [
+      "clean-source"
+    ]
   },
   "repository": {
     "type": "git",
