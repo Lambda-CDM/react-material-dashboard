@@ -66,6 +66,9 @@ class Layout extends React.Component {
           <Link to="/home" onTouchTap={this.toggleNavigation} className="nav-link">
             <MenuItem>Home</MenuItem>
           </Link>
+          <Link to="/cards" onTouchTap={this.toggleNavigation} className="nav-link">
+            <MenuItem>Cards</MenuItem>
+          </Link>
           <Link to="/table" onTouchTap={this.toggleNavigation} className="nav-link">
             <MenuItem>Table</MenuItem>
           </Link>
